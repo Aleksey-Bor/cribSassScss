@@ -1,0 +1,78 @@
+html,
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+}
+
+div {
+  background-color: cyan;
+  color: white;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+.box {
+  background-color: pink;
+  width: 50px;
+  height: 50px;
+}
+
+.box {
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.little {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(2, 36, 2);
+}
+
+.little {
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+
+.container {
+  width: 100%;
+  height: 150px;
+  background-color: bisque;
+}
+
+.article {
+  float: left;
+  width: 62.5%;
+  height: 200px;
+  background-color: aquamarine;
+}
+
+.aside {
+  float: right;
+  width: 31.25%;
+  height: 250px;
+  background-color: beige;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,84 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+$secondary-color: white;
+$primary-background-color: cyan;
+$secondary-background-color: pink;
+$third-background-color: rgb(2, 36, 2);
+
+@import "reset";
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+div {
+  background-color: $primary-background-color;
+  color: $secondary-color;
+}
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+
+.box {
+  background-color: $secondary-background-color;
+  width: 50px;
+  height: 50px;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+.box {
+  @include transform(rotate(30deg));
+}
+
+%style-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: $third-background-color;
+}
+
+.little {
+  @extend %style-shared;
+  @include transform(rotate(10deg));
+}
+
+.container {
+  width: 100%;
+  height: 150px;
+  background-color: bisque;
+}
+
+.article {
+  float: left;
+  width: 600px / 960px * 100%;
+  height: 200px;
+  background-color: aquamarine;
+}
+
+.aside {
+  float: right;
+  width: 300px / 960px * 100%;
+  height: 250px;
+  background-color: beige;
+}
